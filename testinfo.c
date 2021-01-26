@@ -4,16 +4,11 @@
 
 int main(int argc, char *argv[]){
   struct pstat ps;
-  char **ptr = argv+1;
-
   int in = -1;
-
-  if (ptr != (char **)16368){
-  in = atoi(*ptr);
+  if (argc != 1){
+  in = atoi(argv[1]);
 
   }
- 
-
   if (in < 0) {
 
       while(1){
