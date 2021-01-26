@@ -6,7 +6,6 @@ int
 main(int argc, char *argv[])
 {
    int ppid = getpid();
-
    if (fork() == 0) {
       uint * nullp = (uint*)0;
       printf(1, "null dereference: ");
@@ -18,7 +17,6 @@ main(int argc, char *argv[])
    } else {
       wait();
    }
-
    printf(1, "TEST PASSED\n");
    exit();
 }
