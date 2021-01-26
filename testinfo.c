@@ -19,7 +19,7 @@ int main(int argc, char *argv[]){
       if(ps.pid[i])
         printf(1, "%d\t|\t%d\t|\t%d\t|\t%d\n", ps.pid[i], ps.inuse[i], ps.tickets[i], ps.ticks[i]);
     }
-    sleep(200);
+    sleep(150);
  
   }
   }
@@ -32,7 +32,7 @@ int main(int argc, char *argv[]){
            if(ps.pid[i])
         printf(1, "%d\t|\t%d\t|\t%d\t|\t%d\n", ps.pid[i], ps.inuse[i], ps.tickets[i], ps.ticks[i]);
     }
-    sleep(200);
+    sleep(150);
   }
   }
   //fork()
