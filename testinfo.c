@@ -14,7 +14,7 @@ int main(int argc, char *argv[]){
     printf(1, "\nPID\t|\tUSED?\t|\tTickets\t|\tticks\n");
     for (int i = 0; i < NPROC; i++)
     {
-      if(ps.pid[i])
+      if (ps.inuse[i])
         printf(1, "%d\t|\t%d\t|\t%d\t|\t%d\n", ps.pid[i], ps.inuse[i], ps.tickets[i], ps.ticks[i]);
     }
     sleep(150);
@@ -24,9 +24,9 @@ int main(int argc, char *argv[]){
           while(in--){
            getpinfo(&ps);
            printf(1, "\nPID\t|\tUSED?\t|\tTickets\t|\tticks\n");
-          for (int i = 0; i < NPROC ; i++)
+          for (int i = 0; i < NPROC; i++)
              {
-           if(ps.pid[i])
+           if (ps.inuse[i])
         printf(1, "%d\t|\t%d\t|\t%d\t|\t%d\n", ps.pid[i], ps.inuse[i], ps.tickets[i], ps.ticks[i]);
     }
     sleep(150);
