@@ -601,12 +601,8 @@ int
 settickets(int tickets){
   if(tickets < 1)
     return -1;
-  struct proc *proc = myproc();
+  struct proc *proc = myproc(); // my proc() return a pointer to the current process;
   proc->tickets = tickets;
-  acquire(&ptable.lock);
-  ptable.proc[proc-ptable.proc].tickets = tickets;
-  release(&ptable.lock);
-  //cprintf("tickets is %d", proc->tickets);
   return 0;
 }
 
