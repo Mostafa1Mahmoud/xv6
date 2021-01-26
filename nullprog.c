@@ -22,11 +22,3 @@ main(int argc, char *argv[])
    printf(1, "TEST PASSED\n");
    exit();
 }
-/*int
-main(int argc, char *argv[])
-{
-   int *pi = NULL ;
-   printf(1, "null pointer value: %d\n" , *pi);
-   exit();
-}
-*/
