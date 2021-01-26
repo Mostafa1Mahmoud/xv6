@@ -1,0 +1,12 @@
+#include "types.h"
+#include "user.h"
+int main(int argc, char* argv[]){
+    int timer = 32000;
+    int number_of_tickits = atoi(argv[1]);
+    if (number_of_tickits <= 0) {
+            number_of_tickits =1;}
+    settickets(number_of_tickits);
+    while (1);
+    exit();
+    return 0;
+}
