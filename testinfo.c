@@ -35,7 +35,6 @@ int main(int argc, char *argv[]){
     sleep(150);
   }
   }
-  //fork()
   exit();
   return 0;
 }
