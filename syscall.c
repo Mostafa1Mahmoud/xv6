@@ -112,6 +112,7 @@ extern int sys_join(void);
 extern int sys_mprotect(void);
 extern int sys_munprotect(void);
 
+// array of pointers to functions, each function takes a void and return int ;
 static int (*syscalls[])(void) = {
 [SYS_fork]    sys_fork,
 [SYS_exit]    sys_exit,
