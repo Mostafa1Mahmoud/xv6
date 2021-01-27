@@ -239,7 +239,6 @@ Specifically, you'll do three things. First, you'll define a new system call to 
 * * *
 
 ## Project References:
-* [These xv6 Operating System Guides](https://github.com/Mohamed-Fathy-Salah/xv6-public/blob/master/README.md).
 * C Programming Language Topics: Null-pointer, typedef, typedef struct, function pointer.
 * [Programming from the ground up](https://download-mirror.savannah.gnu.org/releases/pgubook/ProgrammingGroundUp-1-0-booksize.pdf).
 * [Threads Chapter](http://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf).
