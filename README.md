@@ -183,7 +183,7 @@ Specifically, you'll do three things. First, you'll define a new system call to 
 		```c
     	testinfo
     	```
-    	![testinfo1](https://user-images.githubusercontent.com/48108210/105907713-f1b68e80-602d-11eb-8d6b-679506da0d64.PNG)  
+    	![WhatsApp Image 2021-01-27 at 15 39 47](https://user-images.githubusercontent.com/48108210/105999545-81078480-60b6-11eb-9b58-f87c3015443f.jpeg)
     
     * To assign tickets for one process, use the command:
     	```c
@@ -193,14 +193,15 @@ Specifically, you'll do three things. First, you'll define a new system call to 
         ```c
         settickets 10 &; testinfo
         ```
-        ![WhatsApp Image 2021-01-26 at 23 33 43](https://user-images.githubusercontent.com/48108210/105908692-35f65e80-602f-11eb-8c67-1c8362219150.jpeg)
+        ![WhatsApp Image 2021-01-27 at 15 41 58](https://user-images.githubusercontent.com/48108210/105999547-8238b180-60b6-11eb-84d0-2def632b6d8c.jpeg)
         
         Example #2:
 	* To assign tickets for many processes, use the command:
         ```c
         settickets 50 &; settickets 100 &; settickets 250 &; testinfo
         ```
-		![testinfo2](https://user-images.githubusercontent.com/48108210/105907827-190d5b80-602e-11eb-80bf-2756f6051c4c.PNG)
+		![WhatsApp Image 2021-01-27 at 15 45 37](https://user-images.githubusercontent.com/48108210/105999793-c3c95c80-60b6-11eb-9984-cac9cffd0388.jpeg)
+
     * * *
 
 * ### Memory Management Test:
