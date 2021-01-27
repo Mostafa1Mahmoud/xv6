@@ -359,7 +359,8 @@ scheduler(void)
     // start added ----------------
     total_tickets = lottery_total();
     winner = random_at_most(total_tickets);
-    // finish added ---------------
+    counter = 0;
+// finish added ---------------
     for(p = ptable.proc; p < &ptable.proc[NPROC]; p++){
       if(p->state != RUNNABLE)
         continue;
