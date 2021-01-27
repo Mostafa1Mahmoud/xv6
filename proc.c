@@ -615,6 +615,9 @@ getpinfo(struct pstat* ps) {
     ps->inuse[i] = p->state != UNUSED; // set 0 for unuse process and 1 for else
     ps->tickets[i] = p->tickets;
     ps->ticks[i] = p->ticks;
+    for (int j=0 ; j < 16 ; j++){
+      ps->name[i][j] = p->name[j];
+    }
     i++;
   }
   release(&ptable.lock);
