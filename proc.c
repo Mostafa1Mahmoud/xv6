@@ -359,8 +359,6 @@ scheduler(void)
     // start added ----------------
     total_tickets = lottery_total();
     winner = random_at_most(total_tickets);
-    //total_tickets = 0;
-    counter = 0;
     // finish added ---------------
     for(p = ptable.proc; p < &ptable.proc[NPROC]; p++){
       if(p->state != RUNNABLE)
@@ -379,7 +377,7 @@ scheduler(void)
       switchuvm(p);
       p->state = RUNNING;
 
-      swtch(&(c->scheduler), p->context);
+      swtch(&(c->scheduler), p->context); // switch to the chossen process 
       switchkvm();
       // start added -----------
        p->ticks += 1;
@@ -613,7 +611,7 @@ getpinfo(struct pstat* ps) {
   acquire(&ptable.lock);
   for (p = ptable.proc; p < &ptable.proc[NPROC]; p++) {
     ps->pid[i] = p->pid;
-    ps->inuse[i] = p->state != UNUSED;
+    ps->inuse[i] = p->state != UNUSED; // set 0 for unuse process and 1 for else
     ps->tickets[i] = p->tickets;
     ps->ticks[i] = p->ticks;
     i++;
