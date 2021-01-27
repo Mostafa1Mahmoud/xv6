@@ -9,10 +9,11 @@ main(int argc, char *argv[])
   char *start = sbrk(0);
   sbrk(PGSIZE);
   *start=100;
+  printf(1, "Protecting the page\n");
   mprotect(start, 1) ;
   int child=fork();
   if(child==0){
-	printf(1, "protected value = %d\n",*start); 
+	printf(1, "Protected Value = %d\n",*start); 
         munprotect(start, 1) ;  
         *start=5;
         printf(1, "After unprotecting the value became = %d\n",*start); 
@@ -20,7 +21,7 @@ main(int argc, char *argv[])
   }
   else if(child>0){
         wait();
-        printf(1, "\nWatch this,I'll trap now\n"); 
+        printf(1, "\nWatch this,Trapping now\n"); 
         *start=5; 
         printf(1, "\nThis statement will not be printed\n");
         exit(); 
